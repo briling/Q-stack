@@ -2,8 +2,7 @@ name: Python Package with caching
 
 # taken from https://github.com/epassaro/cache-conda-envs
 
-# When this workflow is queued, automatically cancel any previous running
-# or pending jobs from the same branch
+# cancel any previous running or pending jobs from the same branch
 concurrency:
   group: python-package-conda-cache-${{ github.head_ref }}
   cancel-in-progress: true
